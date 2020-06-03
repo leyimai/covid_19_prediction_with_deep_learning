@@ -34,12 +34,34 @@ As is shown in Figure 2, the model has reached accuracy of approximately 73% on 
 
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="500"  />
 
-### Model Evaluation Metrics on Test Set
+### Error Analysis
+
+Conducting a detailed error Analysis would also be helpful and meaningful in evaluating the model performance and its implication for clinical setting. The model evaluation metrics, confusion matrix and performance curves of this particular model are shown in Figure 3, Figure 4 and Figure 5, respectively.
+
+As is shown in these results, the model achieves a 76% accuracy on the test set and an almost 100% recall rate (100% on test set and 98.7% on training set). From the confusion matrix, we can see that viral and viral pneumonia are sometimes confused with each other, and normal cases are sometimes classified as bacterial pneumonia or covid.
+
+Considering the covid background, this is a relatively satisfactory result, since failing to identify a covid-19 case is dangerous for the fast spread of covid-19 virus. Although we do not want to falsely identify negative covid-19 case to be positive which would worsen the medical resource shortage, identifying true positive is so important and crucial that we can accept a certain level of false positive cases. The point is that if the recall rate of this classifier is trained to be high enough, it could assist physicians in the diagnosis of COVID-19 with the help of Chest X-rays, especially when the testing kit supply is falling short of the demand.
+
+Therefore, in this COVID-19 setting, we would prefer a model with higher recall or true positive rate, even with a slight drop in precision and slight increase in false positive rate in the tradeoff between recall and precision, as well as between true positive rate and false positive rate.
+
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3metrics.png" width="500"  />
 
-### Presion-recall curve and ROC curve
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3cm.png" width="500"  />
+
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="600"  />
 
-### Visualization of the Model
+
+
+### Model Interpretability
+
+While aiming for higher accuracy and recall is one of the main goals, the model’s inter- pretability is also important, which would provide insight on what features are guiding the model’s prediction in classifying an CXR image. Of the models that I explored, Random forest and Support Vector Machine are generally models with good interpretability. The idea of using multiple decision trees to vote or finding the optimal boundaries of these mod- els make them easier to interpret, with feature importance being more comparable and the decision process being more transparent and understandable.
+
+In comparison, neural network is relatively hard to interpret. The hidden inter-connected layers are like a black box. Nevertheless, there are some tools that we could explore to visu- alize the convolutional neural network so that we can better interpret what are the features extracted and used to distinguish between different classes.
+
+In Figure 6a, the output of four main blcoks are visualized, which shows different features that are extracted at different layers. We can see that the starting layers look at the low-level features including the edges and shade of the lung , whereas the later layers look at higher- level features like some specific positions inside lungs. The visualization of the layerwise output could help us understand the hidden processing of the model to see which pixel areas are crucial in predicting the classes.
+
+In Figure 6b, I used Local Interpretable Model-Agnostic Explanations (LIME) to explain the predictions of the Convolutional Neural Network classifier that I trained. Lime works by perturbing the features in an example and fitting a linear model to determine which features were most contributory to the model’s prediction for that example. As is seen in Figure 6b, superpixels in green indicate regions that were most contributory toward the predicted class, while superpixels coloured red indicate regions that were most contributory against the predicted class. This methods provide a very clear insight for physicians which areas inside the lung they should pay special attention to in the diagnosis of COVID-19.
+
+
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="600"  />
 
