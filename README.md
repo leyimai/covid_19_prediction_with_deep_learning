@@ -8,7 +8,7 @@ The training data (available on Kaggle) includes 1127 chest xrays drawn from sev
 In this project, I have explored implementing various Convolutional Neural Network (CNN) models on the basis of existing architecture like VGG16, ResNet50 using Keras library. Please see the complete training and testing dataset in the train and test directory which are also available in the kaggle competition page https://www.kaggle.com/c/4771-sp20-covid/overview.
 
 
-### Image Data Preprocessing
+### 1. Image Data Preprocessing
 
 Data preprocessing on these CXR image data will be necessary to adapt them into the ResNet50 CNN model and achieve better performance during training. Hence, the following steps of data preprocessing have been implemented.
 1. Resizing and Cropping
@@ -24,7 +24,7 @@ In figure 1, the resized representative chest X-ray images for bacterial pneumon
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="600"  />
 
 
-### Model Training & Error Analysis
+### 2. Model Training
 
 Based on the ResNet50 architecture, the model was modified to include a total of 53 convo- lutional layers in total, the first using a filter of size 7 × 7 and the latter using a filter of size 3 × 3. Batch normalization layers and spatial dropout layers were implemented intermittently to prevent overfitting.
 
@@ -34,7 +34,7 @@ As is shown in Figure 2, the model has reached accuracy of approximately 73% on 
 
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="500"  />
 
-### Error Analysis
+### 3. Error Analysis
 
 Conducting a detailed error Analysis would also be helpful and meaningful in evaluating the model performance and its implication for clinical setting. The model evaluation metrics, confusion matrix and performance curves of this particular model are shown in Figure 3, Figure 4 and Figure 5, respectively.
 
@@ -51,8 +51,7 @@ Therefore, in this COVID-19 setting, we would prefer a model with higher recall 
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="600"  />
 
 
-
-### Model Interpretability
+### 4. Model Interpretability
 
 While aiming for higher accuracy and recall is one of the main goals, the model’s inter- pretability is also important, which would provide insight on what features are guiding the model’s prediction in classifying an CXR image. Of the models that I explored, Random forest and Support Vector Machine are generally models with good interpretability. The idea of using multiple decision trees to vote or finding the optimal boundaries of these mod- els make them easier to interpret, with feature importance being more comparable and the decision process being more transparent and understandable.
 
