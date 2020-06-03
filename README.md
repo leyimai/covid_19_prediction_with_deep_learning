@@ -8,7 +8,21 @@ The training data (available on Kaggle) includes 1127 chest xrays drawn from sev
 In this project, I have explored implementing various Convolutional Neural Network (CNN) models on the basis of existing architecture like VGG16, ResNet50 using Keras library. Please see the complete training and testing dataset in the train and test directory which are also available in the kaggle competition page https://www.kaggle.com/c/4771-sp20-covid/overview.
 
 
-### Representative chest X-ray images
+### Image Data Preprocessing
+
+Data preprocessing on these CXR image data will be necessary to adapt them into the ResNet50 CNN model and achieve better performance during training. Hence, the following steps of data preprocessing have been implemented.
+1. Resizing and Cropping
+Since the given CXRs are drawn from different sources and are of different size and quality, the first step is to resize and crop these images into a same size and same shape, so that it can be input into the ResNet50 model. By applying keras preprocessing image library, I resized the data into 224 × 224 × 3 pixel values and stored them in arrays.
+2. Normalization
+Next, I normalize the data by scaling the pixel values from 0-255 down to 0-1 by dividing the values by 255. This helps ensure each input feature has similar data distribution and accelerate convergence when training the network. If this step is not taken, the convergence will take longer time since distribution of different feature values will likely be different, which complicate the learning process of the network.
+3. Onehot Encoding on Labels
+To build the multi-class classifier, I also applied the one-hot encoding on the label column to generate four separate label columns each representing one of the four classes ’bacterial’, ’viral’, ’normal’ and ’covid’ . The last layer will use the activation function ’softmax’ to output the class with the greatest probability. Without this step, the model will not be able to handle single-column four-class output layer.
+ Leyi Mai - lm3504@columbia.edu 2
+COMS 4771 Machine Learning (2020 Spring) Problem Set #Covid-19 Kaggle Project
+ 4. Data Augmentation
+Lastly, I tried implementing the data augmentation with the ImageDataGenerator tool in Keras, by randomly rotating the image within 20 degrees and shifting for 10% in width and height. This is in an attempt to expose the network to a wider variations so that the model is less prone to undesired characteristics, for example, the angle of the CXR taken, and thus is less likely to be overfitting. This data augmentation has helped stablized the classifier, which has lowered training accuracy increase rate during epochs but improved the accuracy on testing test for 3%.
+In figure 1, the resized representative chest X-ray images for bacterial pneumonia, covid-19, normal, viral pneumonia are displayed respectively.
+
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="600"  />
 
 
@@ -20,7 +34,6 @@ The next step was to tune the hyperparameters of the model. To see which sets of
 
 As is shown in Figure 2, the model has reached accuracy of approximately 73% on both the training and testing set, with the the loss on both sets converged nicely at the later epochs. In figure 2, the learning curves of validation accuracy and loss are shown.
 
-Figure 2
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="500"  />
 
 ### Model Evaluation Metrics on Test Set
