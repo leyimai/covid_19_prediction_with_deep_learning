@@ -21,9 +21,9 @@ To build the multi-class classifier, I also applied the one-hot encoding on the 
 Lastly, I tried implementing the data augmentation with the ImageDataGenerator tool in Keras, by randomly rotating the image within 20 degrees and shifting for 10% in width and height. This is in an attempt to expose the network to a wider variations so that the model is less prone to undesired characteristics, for example, the angle of the CXR taken, and thus is less likely to be overfitting. This data augmentation has helped stablized the classifier, which has lowered training accuracy increase rate during epochs but improved the accuracy on testing test for 3%.
 In figure 1, the resized representative chest X-ray images for bacterial pneumonia, covid-19, normal, viral pneumonia are displayed respectively.
 
-<div style="display:table-cell; vertical-align:middle; text-align:center">
+<p align="center">
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="600"  />
-</div>
+</p>
 
 ### 2. Model Training
 
