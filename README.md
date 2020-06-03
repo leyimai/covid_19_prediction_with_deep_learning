@@ -19,8 +19,8 @@ In this project, I have explored implementing various Convolutional Neural Netwo
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3metrics.png" width="500"  />
 
 ### Presion-recall curve and ROC curve
-<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="500"  />
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="600"  />
 
 ### Visualization of the Model
-<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="500"  />
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="600"  />
 
