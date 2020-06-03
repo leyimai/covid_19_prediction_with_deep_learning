@@ -9,4 +9,4 @@ In this project, I have explored implementing various Convolutional Neural Netwo
 
 
 
-![image](https://github.com/lexsaints/powershell/blob/master/IMG/ps2.png)
+![image](https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png)
