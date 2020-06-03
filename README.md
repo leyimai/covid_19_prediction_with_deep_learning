@@ -52,7 +52,7 @@ Therefore, in this COVID-19 setting, we would prefer a model with higher recall 
 
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3cm.png" width="500"  />
 
-<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="600"  />
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="750"  />
 </p>
 
 ### 4. Model Interpretability
@@ -66,6 +66,6 @@ In Figure 6a, the output of four main blcoks are visualized, which shows differe
 In Figure 6b, I used Local Interpretable Model-Agnostic Explanations (LIME) to explain the predictions of the Convolutional Neural Network classifier that I trained. Lime works by perturbing the features in an example and fitting a linear model to determine which features were most contributory to the model’s prediction for that example. As is seen in Figure 6b, superpixels in green indicate regions that were most contributory toward the predicted class, while superpixels coloured red indicate regions that were most contributory against the predicted class. This methods provide a very clear insight for physicians which areas inside the lung they should pay special attention to in the diagnosis of COVID-19.
 
 <p align="center">
-<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="600"  />
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="800"  />
  </p>
 
