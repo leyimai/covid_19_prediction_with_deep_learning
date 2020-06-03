@@ -7,7 +7,7 @@ The training data (available on Kaggle) includes 1127 chest xrays drawn from sev
 
 In this project, I have explored implementing various Convolutional Neural Network (CNN) models on the basis of existing architecture like VGG16, ResNet50 using Keras library. Please see the complete training and testing dataset in the train and test directory which are also available in the kaggle competition page https://www.kaggle.com/c/4771-sp20-covid/overview.
 
-
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="200" height="400" />
 
 ### Representative chest X-ray images
 ![image](https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png =250x250)
