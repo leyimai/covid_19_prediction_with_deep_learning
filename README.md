@@ -11,5 +11,16 @@ In this project, I have explored implementing various Convolutional Neural Netwo
 ### Representative chest X-ray images
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="600"  />
 
+
 ### Learning Curves of Best Model
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="500"  />
+
+### Model Evaluation Metrics on Test Set
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3metrics.png" width="500"  />
+
+### Presion-recall curve and ROC curve
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="500"  />
+
+### Visualization of the Model
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="500"  />
+
