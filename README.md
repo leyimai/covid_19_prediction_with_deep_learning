@@ -9,7 +9,7 @@ In this project, I have explored implementing various Convolutional Neural Netwo
 
 
 ### Representative chest X-ray images
-<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="800"  />
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png" width="600"  />
 
 ### Learning Curves of Best Model
-<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="700"  />
+<img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="500"  />
