@@ -9,5 +9,5 @@ In this project, I have explored implementing various Convolutional Neural Netwo
 
 
 
-##Figure 1: Representative chest X-ray images
+## Figure 1: Representative chest X-ray images
 ![image](https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/1samples.png)
