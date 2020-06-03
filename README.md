@@ -33,7 +33,9 @@ The next step was to tune the hyperparameters of the model. To see which sets of
 
 As is shown in Figure 2, the model has reached accuracy of approximately 73% on both the training and testing set, with the the loss on both sets converged nicely at the later epochs. In figure 2, the learning curves of validation accuracy and loss are shown.
 
+<p align="center">
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/2learning_curve.png" width="500"  alt="centered image"/>
+</p>
 
 ### 3. Error Analysis
 
@@ -45,12 +47,13 @@ Considering the covid background, this is a relatively satisfactory result, sinc
 
 Therefore, in this COVID-19 setting, we would prefer a model with higher recall or true positive rate, even with a slight drop in precision and slight increase in false positive rate in the tradeoff between recall and precision, as well as between true positive rate and false positive rate.
 
+<p align="center">
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3metrics.png" width="500"  />
 
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/3cm.png" width="500"  />
 
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/4performance_curve.png" width="600"  />
-
+</p>
 
 ### 4. Model Interpretability
 
@@ -62,6 +65,7 @@ In Figure 6a, the output of four main blcoks are visualized, which shows differe
 
 In Figure 6b, I used Local Interpretable Model-Agnostic Explanations (LIME) to explain the predictions of the Convolutional Neural Network classifier that I trained. Lime works by perturbing the features in an example and fitting a linear model to determine which features were most contributory to the model’s prediction for that example. As is seen in Figure 6b, superpixels in green indicate regions that were most contributory toward the predicted class, while superpixels coloured red indicate regions that were most contributory against the predicted class. This methods provide a very clear insight for physicians which areas inside the lung they should pay special attention to in the diagnosis of COVID-19.
 
-
+<p align="center">
 <img src="https://github.com/leyimai/covid_19_prediction_with_deep_learning/blob/master/report_figures/interpretation2.png" width="600"  />
+ </p>
 
